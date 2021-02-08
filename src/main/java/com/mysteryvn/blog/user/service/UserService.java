@@ -17,9 +17,16 @@ public interface UserService {
     /**
      * Create User.
      *
-     * @param user User
+     * @param user {@link User}
      */
     public void createUser(User user);
+
+    /**
+     *
+     * @param user {@link User}
+     * @param role String
+     */
+    public void createUserWithRole(User user, String role);
 
     /**
      * Login.

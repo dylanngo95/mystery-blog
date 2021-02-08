@@ -1,7 +1,7 @@
-package com.mysteryvn.blog.controller;
+package com.mysteryvn.blog.employee.controller;
 
-import com.mysteryvn.blog.model.Employee;
-import com.mysteryvn.blog.service.EmployeeService;
+import com.mysteryvn.blog.employee.model.Employee;
+import com.mysteryvn.blog.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

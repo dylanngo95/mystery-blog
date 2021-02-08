@@ -18,6 +18,11 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/")
+    public String home(Model model) {
+        return "home";
+    }
+
+    @GetMapping("/user")
     public String login(Model model) {
         User user = new User();
         model.addAttribute("user", user);
@@ -32,13 +37,19 @@ public class UserController {
         return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/login/post")
     public String login(@ModelAttribute("user") User user, Model model) {
+        this.userService.createUserWithRole(user, "USER");
        User userLoad = this.userService.login(user.getEmail(), user.getPassword());
        if (userLoad != null && userLoad.isEnable()) {
            return "redirect:/index";
        } else {
            return "redirect:/login-error";
        }
+    }
+
+    @GetMapping("/admin")
+    public String admin(Model model) {
+        return "admin";
     }
 }

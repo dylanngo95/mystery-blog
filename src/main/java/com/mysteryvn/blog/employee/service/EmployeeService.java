@@ -1,6 +1,6 @@
-package com.mysteryvn.blog.service;
+package com.mysteryvn.blog.employee.service;
 
-import com.mysteryvn.blog.model.Employee;
+import com.mysteryvn.blog.employee.model.Employee;
 
 import java.util.List;
 

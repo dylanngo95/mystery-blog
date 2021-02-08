@@ -1,4 +1,4 @@
-package com.mysteryvn.blog.model;
+package com.mysteryvn.blog.employee.model;
 
 import javax.persistence.*;
 

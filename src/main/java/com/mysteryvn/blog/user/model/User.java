@@ -25,14 +25,30 @@ public class User {
 
     private boolean tokenExpired;
 
+    public User(long id, String firstName, String lastName, String email, String password, boolean enable, boolean tokenExpired, Collection<Role> roles) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.enable = enable;
+        this.tokenExpired = tokenExpired;
+        this.roles = roles;
+    }
+
+    public User() {
+    }
+
     @ManyToMany
     @JoinTable(
             name = "user_roles",
             joinColumns = @JoinColumn(
-                    name = "user_id"
+                    name = "user_id",
+                    referencedColumnName = "entity_id"
             ),
             inverseJoinColumns = @JoinColumn(
-                    name = "role_id"
+                    name = "role_id",
+                    referencedColumnName = "entity_id"
             )
     )
     private Collection<Role> roles;

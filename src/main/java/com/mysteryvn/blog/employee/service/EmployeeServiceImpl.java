@@ -1,7 +1,7 @@
-package com.mysteryvn.blog.service;
+package com.mysteryvn.blog.employee.service;
 
-import com.mysteryvn.blog.model.Employee;
-import com.mysteryvn.blog.repository.EmployeeRepository;
+import com.mysteryvn.blog.employee.model.Employee;
+import com.mysteryvn.blog.employee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -15,7 +15,16 @@ public class Role {
     @Column(unique = true)
     private String name;
 
-//    @ManyToMany
+    public Role(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Role() {
+
+    }
+
+    //    @ManyToMany
 //    @JoinTable(
 //            name = "roles_privileges",
 //            joinColumns = @JoinColumn(

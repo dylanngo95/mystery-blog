@@ -1,6 +1,6 @@
-package com.mysteryvn.blog.repository;
+package com.mysteryvn.blog.employee.repository;
 
-import com.mysteryvn.blog.model.Employee;
+import com.mysteryvn.blog.employee.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
